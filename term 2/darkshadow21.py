@@ -1,0 +1,5 @@
+nmb1 = input ("nmb1:")
+nmb2 = input ("nmb2:")
+nmb3 = input ("nmb3:")
+nmb4 = input ("nmb4:")
+nmb5 = input ("nmb5:")
