@@ -1,6 +1,13 @@
 import tkinter as tk
-
+import tkinter.ttk as ttk
+from typing import Text
 import reg
+
+def srch():
+    pass
+
+
+
 
 def register():
     reg.register(
@@ -37,6 +44,10 @@ frame.grid(row=6, column=0, columnspan=2)
 tk.Button(frame, text='register', command=register).grid(row=0, column=0)
 tk.Button(frame, text='cancel', command=root.destroy).grid(row=0, column=1)
 
-
+ttk.Separator(root,orient=tk.HORIZONTAL).grid(row=5, column=0, columnspan=2, sticky="ew")
+tk.label(root, text='sratch').grid(row=6, column=0)
+search = tk.Entry(root)
+search.grid(row=6, column=1)
+tk.Button(root, text='Search, command=srch).grid(row=7, column=0, columnspan=2)
 
 root.mainloop()
