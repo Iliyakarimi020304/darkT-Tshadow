@@ -1,9 +1,9 @@
 import tkinter as tk
+from tkinter.constants import W
 import tkinter.ttk as ttk
 from typing import Text
 import reg
-
-def date(a ,b ,c)
+from tkcalendar import DateEntry
 
 
 def alphabet(a ,b ,c):
@@ -50,7 +50,16 @@ def register():
         birth.get(),
         code.get(),
     )
-    
+
+    name.set('')
+    last.set('')
+    code.set('')
+
+
+
+
+
+
 root = tk.Tk()
 
 
@@ -60,33 +69,33 @@ tk.Label(root, text='Birth Date').grid(row=2, column=0)
 tk.Label(root, text='ID code').grid(row=3, column=0)
 
 name = tk.StringVar()
-e1 = tk.Entry(root, textvarieble=name)
-e1.grid(row=0, column=1)
 name.trace("w", alphabet)
+e1 = tk.Entry(root, textvariable=name)
+e1.grid(row=0, column=1)
 
 last = tk.StringVar()
-last = tk.Entry(root, textvarieble=name)
-last.grid(row=1, column=1)
 last.trace("w", alphabet)
+e2 = tk.Entry(root, textvariable=name)
+e2.grid(row=1, column=1)
 
 birth = tk.StringVar()
-birth = tk.Entry(root, textvarieble=name)
-birth.grid(row=2, column=1)
-birth.trace("w", alphabet)
+e3 = DateEntry(root, width=12, back)
 
 code = tk.StringVar()
-code = tk.Entry(root, textvarieble=name)
-code.grid(row=3, column=1)
+code.trace("w", alphabet)
+e4 = tk.Entry(root, textvariable=name)
+e4.grid(row=3, column=1)
 
-frame = tk.StringVar()
-frame = tk.Frame(root, textvarieble=name)
-frame.grid(row=6, column=0, columnspan=2)
+
+frame = tk.Frame(root)
+frame.grid(row=4, column=0, columnspan=2)
 
 tk.Button(frame, text='register', command=register).grid(row=0, column=0)
 tk.Button(frame, text='cancel', command=root.destroy).grid(row=0, column=1)
 
 ttk.Separator(root,orient=tk.HORIZONTAL).grid(row=5, column=0, columnspan=2, sticky="ew")
-tk.label(root, text='sratch').grid(row=6, column=0)
+
+tk.Label(root, text='sratch').grid(row=6, column=0)
 search = tk.Entry(root)
 search.grid(row=6, column=1)
 tk.Button(root, text='Search', command=srch).grid(row=7, column=0, columnspan=2)
