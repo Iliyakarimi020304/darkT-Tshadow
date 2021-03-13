@@ -79,8 +79,9 @@ e2 = tk.Entry(root, textvariable=name)
 e2.grid(row=1, column=1)
 
 birth = tk.StringVar()
-e3 = DateEntry(root, width=12, back)
-
+e3 = DateEntry(root, width=12, background='darkblue', foreground='white',
+    borderwidth=2, date_pattern='y-mm-dd')
+e3.grid(row=2, column1, )
 code = tk.StringVar()
 code.trace("w", alphabet)
 e4 = tk.Entry(root, textvariable=name)
