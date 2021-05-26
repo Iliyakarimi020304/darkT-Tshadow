@@ -35,12 +35,18 @@ def callback_t_1(a, b, c):
     t1.set('%02d:%02d:%02d',(h1, m1, s1))
 
  def callback_t_2(a, b, c):
-     h1 = int(h_p_2.get())
-
-     t2.set('%02d:%02d:%02d',h1, int(m_p_2.get()), int(s_p_2.get()))
+    h2 = int(h_p_2.get())
+    m2 = int(m_p_1.get())
+    s2 = int(s_p_1.get())
+     
+    t2.set('%02d:%02d:%02d',h1, int(m_p_2.get()), int(s_p_2.get()))
 
  def callback_t_3(a, b, c):
-     t3.set('%02d:%02d:%02d',int(h_p_3.get()), int(m_p_3.get()), int(s_p_3.get()))
+    h2 = int(h_p_2.get())
+    m2 = int(m_p_1.get())
+    s2 = int(s_p_1.get())     
+    
+    t3.set('%02d:%02d:%02d',int(h_p_3.get()), int(m_p_3.get()), int(s_p_3.get()))
 
 root = tk.Tk()
 note = ttk.Notebook(root)
